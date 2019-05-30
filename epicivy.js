@@ -310,6 +310,8 @@ exports.setupEpicIvy = function () {
     }
 };
 if (document.readyState != 'loading') {
+    var vh = window.innerHeight * 0.01;
+    alert(vh);
     document.addEventListener('resize', function () {
         // We execute the same script as before
         var vh = window.innerHeight * 0.01;
