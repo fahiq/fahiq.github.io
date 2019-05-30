@@ -309,20 +309,21 @@ exports.setupEpicIvy = function () {
         }
     }
 };
-if (document.readyState != 'loading')
-    exports.setupEpicIvy();
-else {
-    if (document.addEventListener) {
-        document.addEventListener('DOMContentLoaded', function (event) {
-            exports.setupEpicIvy();
-        });
-    }
+if (document.readyState != 'loading') {
     document.addEventListener('resize', function () {
         // We execute the same script as before
         var vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', vh + "px");
         alert('resized');
     });
+    exports.setupEpicIvy();
+}
+else {
+    if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', function (event) {
+            exports.setupEpicIvy();
+        });
+    }
     // else { if (typeof document.attachEvent  === 'function'){
     //     document.attachEvent('onreadystatechange', function(){
     //      if (document.readyState === 'complete' || document.readyState === 'interactive') 
