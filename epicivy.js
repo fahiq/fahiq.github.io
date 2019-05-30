@@ -201,7 +201,7 @@ var setupChat = function (isChatClosed) {
     var EI_cookie = getCookie();
     bouncyImageElement.addEventListener('click', function () {
         var vh = window.innerHeight * 0.01;
-        alert(vh);
+        document.documentElement.style.setProperty('--vh', vh + "px");
         document.addEventListener('resize', function () {
             // We execute the same script as before
             var vh = window.innerHeight * 0.01;
