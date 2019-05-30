@@ -236,6 +236,7 @@ var setupChat = function (isChatClosed) {
                     document.body.appendChild(chatLogicScript);
                 }
                 chatContentWindowElement.classList.toggle('ei-chat-remove-class');
+                chatContentWindowElement.classList.toggle('ei-live-chat-minimize');
             });
         }
     }
