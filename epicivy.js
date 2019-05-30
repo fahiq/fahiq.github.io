@@ -236,13 +236,7 @@ var setupChat = function (isChatClosed) {
                 if (!document.getElementById('chatLogic')) {
                     document.body.appendChild(chatLogicScript);
                 }
-                var vh = window.innerWidth;
-                if (vh > 480) {
-                    chatContentWindowElement.classList.toggle('ei-chat-remove-class');
-                }
-                else {
-                    chatMainWindowElement.classList.toggle('ei-live-chat-minimize');
-                }
+                chatContentWindowElement.classList.toggle('ei-chat-remove-class');
             });
         }
     }
