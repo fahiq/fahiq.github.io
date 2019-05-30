@@ -235,7 +235,7 @@ var setupChat = function (isChatClosed) {
                 if (!document.getElementById('chatLogic')) {
                     document.body.appendChild(chatLogicScript);
                 }
-                var vh = window.innerHeight;
+                var vh = window.innerWidth;
                 alert(vh);
                 if (vh > 410) {
                     chatContentWindowElement.classList.toggle('.ei-chat-remove-class');
