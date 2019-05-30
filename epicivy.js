@@ -321,6 +321,7 @@ else {
         // We execute the same script as before
         var vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', vh + "px");
+        alert('resized');
     });
     // else { if (typeof document.attachEvent  === 'function'){
     //     document.attachEvent('onreadystatechange', function(){
