@@ -81,15 +81,15 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var isBouncyEnabled = true;
 var customizations = {
-    isChatEnabled: false,
-    accountId: '',
-    appKey: '',
-    headerBackgroundColor: '',
-    headerTextColor: '',
-    sendButtonBackgroundColor: '',
-    sendButtonTextColor: '',
-    closeButtonBackgroundColor: '',
-    chatQuestion: '',
+  isChatEnabled: true,
+    accountId: '2',
+    appKey: 'cc1c57b0-50ab-11e9-813c-8131ea17b1dd',
+    headerBackgroundColor: '#449ee3',
+    headerTextColor: '#5c6d79',
+    sendButtonBackgroundColor: '#1075c4',
+    sendButtonTextColor: '#293239',
+    closeButtonBackgroundColor: '#1b2126',
+    chatQuestion: 'Can we help today1?',
     isPhoneEnabled: false,
 };
 var isCookieAvailable = function () {
