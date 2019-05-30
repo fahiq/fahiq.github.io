@@ -200,6 +200,14 @@ var setupChat = function (isChatClosed) {
     bouncyImageElement.className = 'epic-ivy-bounce';
     var EI_cookie = getCookie();
     bouncyImageElement.addEventListener('click', function () {
+        var vh = window.innerHeight * 0.01;
+        alert(vh);
+        document.addEventListener('resize', function () {
+            // We execute the same script as before
+            var vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', vh + "px");
+            alert('resized');
+        });
         mainChatWindow.style.display = 'block';
         bouncyImageElement.style.display = 'none';
         document.body.appendChild(chatLogicScript);
@@ -310,14 +318,6 @@ exports.setupEpicIvy = function () {
     }
 };
 if (document.readyState != 'loading') {
-    var vh = window.innerHeight * 0.01;
-    alert(vh);
-    document.addEventListener('resize', function () {
-        // We execute the same script as before
-        var vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', vh + "px");
-        alert('resized');
-    });
     exports.setupEpicIvy();
 }
 else {
