@@ -223,9 +223,10 @@ var setupChat = function (isChatClosed) {
     var chatProblemElement = document.getElementById('chatProblem');
     var chatSendButtonElement = document.getElementById('chatSendButton');
     var chatEmailElement = document.getElementById('chatEmail');
+    var chatMainWindowElement = document.getElementById('live-chat');
     if (!isChatClosed) {
         document.body.appendChild(chatLogicScript);
-        if (chatBoxMinimizeElement && chatContentWindowElement) {
+        if (chatBoxMinimizeElement && chatContentWindowElement && chatMainWindowElement) {
             chatBoxMinimizeElement.addEventListener('click', function () {
                 var EI_cookie = getCookie();
                 if (EI_cookie.isBouncyEnabled === false) {
@@ -240,7 +241,7 @@ var setupChat = function (isChatClosed) {
                     chatContentWindowElement.classList.toggle('ei-chat-remove-class');
                 }
                 else {
-                    chatContentWindowElement.classList.toggle('ei-live-chat-minimize');
+                    chatMainWindowElement.classList.toggle('ei-live-chat-minimize');
                 }
             });
         }
