@@ -237,10 +237,10 @@ var setupChat = function (isChatClosed) {
                 }
                 var vh = window.innerWidth;
                 if (vh > 480) {
-                    chatContentWindowElement.classList.toggle('.ei-chat-remove-class');
+                    chatContentWindowElement.classList.toggle('ei-chat-remove-class');
                 }
                 else {
-                    chatContentWindowElement.classList.toggle('.ei-live-chat-minimize');
+                    chatContentWindowElement.classList.toggle('ei-live-chat-minimize');
                 }
             });
         }
