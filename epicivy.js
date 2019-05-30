@@ -223,10 +223,9 @@ var setupChat = function (isChatClosed) {
     var chatProblemElement = document.getElementById('chatProblem');
     var chatSendButtonElement = document.getElementById('chatSendButton');
     var chatEmailElement = document.getElementById('chatEmail');
-    var chatMainWindowElement = document.getElementById('live-chat');
     if (!isChatClosed) {
         document.body.appendChild(chatLogicScript);
-        if (chatBoxMinimizeElement && chatContentWindowElement && chatMainWindowElement) {
+        if (chatBoxMinimizeElement && chatContentWindowElement) {
             chatBoxMinimizeElement.addEventListener('click', function () {
                 var EI_cookie = getCookie();
                 if (EI_cookie.isBouncyEnabled === false) {
