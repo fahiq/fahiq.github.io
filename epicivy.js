@@ -235,7 +235,13 @@ var setupChat = function (isChatClosed) {
                 if (!document.getElementById('chatLogic')) {
                     document.body.appendChild(chatLogicScript);
                 }
-                chatContentWindowElement.classList.toggle('ei-chat-remove-class');
+                var vhheight = window.innerHeight;
+                if (vhheight > 480) {
+                    chatContentWindowElement.classList.toggle('ei-chat-remove-class');
+                }
+                else {
+                    chatContentWindowElement.classList.toggle('ei-live-chat-minimize');
+                }
             });
         }
     }
